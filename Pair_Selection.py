@@ -69,7 +69,7 @@ pairsFilter1={}
 for group in groups.keys():
     bins=groups[group]
     temp=[]
-    
+    print (group)
     for i in range(len(bins)):
         for j in range(i+1,len(bins)):            
             beta1= bins.iloc[i].Beta
@@ -105,7 +105,7 @@ for pairs in pairsFilter1.keys():
             corr=np.corrcoef(s1,s2)[0][1]
             if hurst1<hurstThreshold and corr>correlationThreshold:
                 temp.append(stock)
-                print (stock)
+                
             
     pairsFilter2[pairs]=temp
     
